@@ -9,7 +9,7 @@
     justify-content: space-between;
     background-color: #0a0a0a;
     align-items: center;
-    height: 80px;
+    height: 180px;
 }
 
 #logo {
@@ -176,12 +176,39 @@
     font-weight: 800;
 }
 
+#ubicaciones {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    margin: 10px 0px 10px 0px;
+    padding: 20px;
+}
+
 #listaubicaciones {
     background-color: grey;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
 }
+
+#listaubicaciones div img {
+    border-radius: 10px;
+    margin: 10px;
+    width: 400px;
+}
+
+#listaubicaciones div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#listaubicaciones div p {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+
 
 #listaubicaciones h2 {
     font-size: 30px;
@@ -290,5 +317,10 @@
     
     #descrpImg h3 {
         font-size: 17px;
+    }
+
+    #listaubicaciones {
+        display: flex;
+        flex-direction: column;
     }
 }

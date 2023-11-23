@@ -9,7 +9,7 @@
     justify-content: space-between;
     background-color: #0a0a0a;
     align-items: center;
-    height: 80px;
+    height: 180px;
 }
 
 #logo {
@@ -155,11 +155,28 @@
 }
 
 #quienesSomos {
+    width: 100%;
+    border-radius: 10px;
+    color: grey;
+    display: flex;
+}
+
+#quienesSomos div img {
+    width: 500px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#infoQuienesSomos {
     background-color: #0a0a0a;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
-    color: grey;
+
+}
+
+#infoQuienesSomos p {
+    line-height: 30px;
 }
 
 #infoNosotros p {
@@ -178,14 +195,33 @@
     font-family: 'Oswald', sans-serif;
 }
 
-#historia {
+#infoHistoria {
     background-color: #a87318;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
 }
 
+#historia {
+    display: flex;
+}
+
+#historia div img {
+    border-radius: 10px;
+    margin: 10px;
+    width: 500px;
+}
+
 #servicios {
+    display: flex;
+}
+
+#servicios div img {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#infoServicios {
     background-color: #a8a8a8;
     margin: 10px;
     padding: 20px;
@@ -194,7 +230,7 @@
 
 @media (max-width: 768px) {
     #nav {
-        min-height: 120px;
+        min-height: 180px;
     }
 
     #titulo {
@@ -251,4 +287,20 @@
     #banner img {
         height: 400px;
     }
+
+    #quienesSomos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #historia {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #servicios {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

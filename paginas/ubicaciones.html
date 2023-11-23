@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@400;500;700&family=Josefin+Sans:wght@100&family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@400;500;700&family=Josefin+Sans:wght@100&family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Ubicaciones</title>
 </head>
+
 <body>
     <section>
         <nav id="nav">
@@ -31,12 +36,40 @@
                     <a href="/paginas/sobreNosotros.html">Sobre nosotros</a>
                 </div>
                 <div style="margin-top: 5px;">
-                    <a href="/paginas/ubicaciones.html">Ubicaciones</a>
+                    <a href="/paginas/ubicaciones.html">Más info</a>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Carrito
+                    </button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito de compras</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carrito">
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary"
+                                        style="background-color: #344778; color: white;"
+                                        onclick="comprar()">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </section>
-    <div>
+    <!-- <div>
         <div>
             <img id="bannerImg" width="100%" height="550" src="https://cdn.discordapp.com/attachments/1095392040596025414/1176999409968484513/responsabilidad-social.png?ex=6570e91e&is=655e741e&hm=e041538d09fc1e7cb66b4393efbe9da6a5abac6dfcb96b08d950ccaacaa4dbcc&" alt="Nosotros">
         </div>
@@ -44,68 +77,93 @@
             <h3>ByteBurger se compromete con la RSE, respaldando iniciativas locales y promoviendo prácticas sostenibles.
                 </h3>
         </div>
-    </div>
+    </div> -->
     <section id="preguntasFrecuentes">
         <h2 class="text-center">Preguntas Frecuentes</h2>
         <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                1. ¿Cuáles son sus horarios de atención?
-            </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Nuestros horarios pueden variar según la ubicación. Te recomendamos visitar nuestra sección "Descripciones de nuestras ubicaciones" para obtener información detallada sobre horarios.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1. ¿Cuáles son sus horarios de atención?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Nuestros horarios pueden variar según la ubicación. Te recomendamos visitar nuestra sección
+                        "Descripciones de nuestras ubicaciones" para obtener información detallada sobre horarios.
+                    </div>
+                </div>
             </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. ¿Ofrecen opciones vegetarianas o veganas?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Sí, contamos con opciones vegetarianas y veganas en nuestro menú. Puedes explorar nuestras
+                        alternativas de hamburguesas para satisfacer tus preferencias alimenticias.
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                2. ¿Ofrecen opciones vegetarianas o veganas?
-            </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Sí, contamos con opciones vegetarianas y veganas en nuestro menú. Puedes explorar nuestras alternativas de hamburguesas para satisfacer tus preferencias alimenticias.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. ¿Cómo puedo realizar un pedido a domicilio?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Puedes realizar tu pedido a domicilio directamente desde nuestra página web o a través de
+                        nuestras plataformas asociadas de entrega a domicilio. Simplemente selecciona los productos que
+                        desees y sigue los pasos para completar tu pedido.
+                    </div>
+                </div>
             </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        4. ¿Tienen opciones sin gluten?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Sí, disponemos de opciones sin gluten en nuestro menú. Comunica tus restricciones alimenticias
+                        al momento de realizar tu pedido y nuestro equipo estará encantado de ayudarte.
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                3. ¿Cómo puedo realizar un pedido a domicilio?
-            </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Puedes realizar tu pedido a domicilio directamente desde nuestra página web o a través de nuestras plataformas asociadas de entrega a domicilio. Simplemente selecciona los productos que desees y sigue los pasos para completar tu pedido.
-            </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                4. ¿Tienen opciones sin gluten?
-            </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Sí, disponemos de opciones sin gluten en nuestro menú. Comunica tus restricciones alimenticias al momento de realizar tu pedido y nuestro equipo estará encantado de ayudarte.
-            </div>
-            </div>
-        </div>
     </section>
-    <div id="listaubicaciones">
-        <div>
-            <h2>Nuestras Ubicaciones</h2>
-            <ul>
-                <li><a href="https://maps.app.goo.gl/bmEbJemmzoJNxaAG7">Fitz Roy 1970</a></li>
-                <li><a href="https://maps.app.goo.gl/NiPEYmEKANinL16MA">Jorge Luis Borges 1766</a></li>
-                <li><a href="https://maps.app.goo.gl/HzWmDHcigK12vqwt7">Aguirre 1009</a></li>
-            </ul>
-
+    <div id="ubicaciones">
+        <h2 style="display: flex; justify-content: center;">Nuestras Ubicaciones</h2>
+        <div id="listaubicaciones">
+            <div>
+                <img src="https://media.discordapp.net/attachments/1095392040596025414/1177235158445867068/Screenshot_20231123_095058_Maps.jpg?ex=6571c4ad&is=655f4fad&hm=c36cb132447c3d96394d67895a708cee339813aaf7a1d01aca6d0ea843becfba&=&format=webp&width=351&height=467"
+                    alt="">
+                <a href="https://maps.app.goo.gl/bmEbJemmzoJNxaAG7">
+                    Fitz roy
+                </a>
+            </div>
+            <div>
+                <img src="https://media.discordapp.net/attachments/1095392040596025414/1177231302123069511/Screenshot_20231123_095619_Maps.jpg?ex=6571c116&is=655f4c16&hm=cbce05ea5a75daf85682c1e949ffa8c83939f7eaa251691776fae992c28ef9e7&=&format=webp&width=355&height=468"
+                    alt="">
+                <a href="https://maps.app.goo.gl/NiPEYmEKANinL16MA">
+                    Jorge Luis Borges 1766
+                </a>
+            
+            </div>
+            <div>
+                <img src="https://media.discordapp.net/attachments/1095392040596025414/1177232237616451644/Screenshot_20231123_095959_Maps.jpg?ex=6571c1f5&is=655f4cf5&hm=09faddbbed4d1915b49adc0672edb59674f94c9f74cdd84628210603c2823ee6&=&format=webp&width=359&height=468"
+                    alt="">
+                <a href="https://maps.app.goo.gl/HzWmDHcigK12vqwt7">
+                    Aguirre 1009
+                </a>
+            </div>
         </div>
     </div>
     <section id="footer">
@@ -126,7 +184,9 @@
         </div>
         <div id="info">
             <h4>Sobre nosotros</h4>
-            <p>Somos un grupo de amigos apasionados por la informatica y la comida. Nuestra duda fue siempre como podemos relacionar la programacion con la comida? Luego de bastante tiempo pensando llegamos a la conclusion de que teniamos que vender hamburguesas con nombres de lenguajes de programacion!!!</p>
+            <p>Somos un grupo de amigos apasionados por la informatica y la comida. Nuestra duda fue siempre como
+                podemos relacionar la programacion con la comida? Luego de bastante tiempo pensando llegamos a la
+                conclusion de que teniamos que vender hamburguesas con nombres de lenguajes de programacion!!!</p>
         </div>
         <div id="copyright">
             <h4>Politicas legales</h4>
@@ -135,4 +195,5 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
