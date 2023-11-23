@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0a0a0a;
+    align-items: center;
+    height: 80px;
+}
+
+#logo {
+    margin-left: 20px;
+}
+
+#titulo {
+    margin-left: 50px;
+}
+
+#titulo h1 {
+    color: #b08a17;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#opciones {
+    display: flex;
+}
+
+#opcContacto {
+    margin-top: 5px;
+}
+
+#opciones div {
+    margin-right: 30px;
+}
+
+#opciones div a {
+    text-decoration: none;
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+#opciones div a:hover {
+    text-decoration: underline;
+}
+
+#opciones div button {
+    background-color: #0a0a0a;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+#opciones div button:hover {
+    text-decoration: underline;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+}
+
+#redes h4 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 27px;
+    color: #7d7d7d;
+    display: flex;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+#redes div p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.red {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.red img {
+    margin-right: 10px;
+}
+
+.red p {
+    margin-top: 15px;
+}
+
+#info {
+    width: 40%;
+    margin-top: 10px;
+}
+
+#info h4 {
+    font-size: 27px;
+    color: #7d7d7d;
+    display: flex;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+#info p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+#copyright {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#copyright h4 {
+    font-size: 27px;
+    color: #7d7d7d;
+    display: flex;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+#copyright p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#copyright p:hover {
+    text-decoration: underline;
+}
+
+#quienesSomos {
+    background-color: #0a0a0a;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: grey;
+}
+
+#infoNosotros p {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+#infoNosotros h3 {
+    font-size: 30px;
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+#historia {
+    background-color: #a87318;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#servicios {
+    background-color: #a8a8a8;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #nav {
+        min-height: 120px;
+    }
+
+    #titulo {
+        justify-content: center;
+    }
+
+    #opciones {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #opciones div {
+        margin: 10px 0;
+    }
+
+    #imgCar1 {
+        height: 400px;
+    }
+    
+    #imgCar2 {
+        height: 400px;
+    }
+    
+    #imgCar3 {
+        height: 400px;
+    }
+
+    #productos {
+        margin-left: 50px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #info {
+        width: 80%;
+    }
+
+    #galeriaImg {
+        flex-wrap: wrap;
+        padding-left: 60px;
+    }
+
+    .texto {
+        margin-left: 70px;
+        margin-right: 70px;
+        font-size: 11px;
+        padding-bottom: 10px;
+    }
+
+    #banner img {
+        height: 400px;
+    }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@400;500;700&family=Josefin+Sans:wght@100&family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>ByteBurger</title>
+</head>
+<body style="scroll-behavior: smooth;">
+    <section>
+        <nav id="nav">
+            <div id="logo">
+                <img src="/img/iconoBurger.jpg" height="60px" style="border-radius: 10px;" alt="Logo">
+            </div>
+            <div id="titulo">
+                <h1>ByteBurger</h1>
+            </div>
+            <div id="opciones">
+                <div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"        data-bs-target="#staticBackdrop">
+                        Carrito
+                    </button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito de compras</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carrito">
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary" style="background-color: #344778; color: white;" onclick="comprar()">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 5px;">
+                    <a href="/paginas/sobreNosotros.html">Sobre nosotros</a>
+                </div>
+                <div style="margin-top: 5px;">
+                    <a href="/paginas/ubicaciones.html">Ubicaciones</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="carousel">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/burga3.jpg" class="d-block w-100" id="imgCar1" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/burga5.jpg" class="d-block w-100" id="imgCar2" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/burga6-irvine-3jpg.jpg" class="d-block w-100" id="imgCar3" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <section id="seccionProductos">
+        <div id="productosTitulo">
+            <p>Productos</p>
+        </div>
+        <div id="productos">
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burgaPHP.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd">PHP</p>
+                <p>La hamburguesa PHP presenta una combinación clásica con un toque fresco: dos medallones de carne acompañados de cebolla morada, tomate y lechuga. Una opción sabrosa y equilibrada.</p>
+                <p>Precio: $3650</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('PHP', 3650)">Agregar al carrito</button>
+            </div>
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burgaJavaScript.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd">JavaScript</p>
+                <p>La hamburguesa JavaScript es una explosión de sabor con dos jugosos medallones de carne y una generosa porción de queso fresco. Un festín de sabores que deleitará a los amantes de la carne y del queso.</p>
+                <p>Precio: $3880</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('JavaScript', 3880)">Agregar al carrito</button>
+            </div>
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burgaJava.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd">Java</p>
+                <p>La hamburguesa Java contiene dos medallones de carne con jamón, lechuga, tomate y queso fresco. Una combinación clásica y fresca.</p>
+                <p>Precio: $3270</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Java', 3270)">Agregar al carrito</button>
+            </div>
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burgaPython.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd">Python</p>
+                <p>La hamburguesa Python: dos medallones de carne con abundante queso cheddar. Simplicidad y sabor en cada bocado.</p>
+                <p>Precio: $3650</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Python', 3650)">Agregar al carrito</button>
+            </div>
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burgaSQl.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd">SQL</p>
+                <p>La hamburguesa SQL con 4 medallones de carne con mucho cheddar. Una explosión de sabor en cada bocado.</p>
+                <p>Precio: $3160</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('SQL', 3160)">Agregar al carrito</button>
+            </div>
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burga1.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd">Ruby</p>
+                <p>La hamburguesa Ruby: medallón de carne, panceta, tomate y queso cheddar. Una explosión de sabores intensos.</p>
+                <p>Precio: $3880</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Ruby', 3880)">Agregar al carrito</button>
+            </div>
+            <div class="prod">
+                <div style="display: flex; justify-content: center;">
+                    <img src="/img/burga2.jpg" height="190px" width="250px" alt="">
+
+                </div>
+                <p class="tituloProd" >Swift</p>
+                <p>La hamburguesa Swift presenta dos jugosos medallones de carne con queso cheddar, cebolla caramelizada y se sirve en un pan de papa gratinado. Una combinación de sabores clásicos con un toque innovador y delicioso.</p>
+                <p>Precio: $3650</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Swift', 3650)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="galeriaImg">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="/img/fachadaBurger.jpg" height="250px" alt="la concha no cargo la foto">
+            <p>Aca podemos visualizar nuestro local de hamburguesas el cual proporciona una buena comodidad mediant nuestras sillas y mesas, además de un buen servicio al cliente,  con el objetivo de ser llamativo y acogedor para degustar nuestras hamburguesas</p>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="/img/brutalMostrador.jpeg" height="250px" width="350px" alt="">
+            <p>Nuestro local de hamburguesas proporciona una buena comodidad llevada a cabo con nuestras sillas y mesas, un buen servicio al cliente, y promociones actuales en la vidriera.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="/img/localBurger.jpeg" height="250px" alt="">
+            <p>Ofrecemos un ambiente acogedor y llamativo con una decoración de caracter minimalista para no cargar el estres de las personas, de esta manera brindamos tranquilidad y armonia para degustar nuestras grandiosas hamburguesas.</p>
+        </div>
+    </section>
+    <section id="reseñaImg">
+        <div id="textCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="carouselContainer">
+                <div class="carousel-item active">
+                    <p class="texto">La "Swift" ofrece una experiencia única con su pan de papa y queso que abraza dos suculentos medallones de carne y cebolla caramelizada. El pan es esponjoso, los medallones jugosos, y la cebolla agrega un toque dulce. Una combinación maestra de sabores reconfortantes que hace que cada bocado sea un placer inmediato. La "Swift" es la elección perfecta para quienes buscan una delicia gourmet sin complicaciones.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p class="texto">La hamburguesa "Ruby" es un deleite para los amantes del bacon. Con dos jugosos medallones de carne y una generosa porción de bacon crujiente, esta creación es una explosión de sabores. La frescura del tomate añade un toque refrescante. La combinación equilibrada de texturas, desde la suavidad de la carne hasta la crujiente del bacon, crea una experiencia culinaria única. Servida con generosidad, "Ruby" es una opción imprescindible para quienes buscan una hamburguesa que despierte los sentidos con cada bocado. ¡Prepárate para un festín de sabores intensos con la inigualable "Ruby"!</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="texto">La "JavaScript" es una oda a la simplicidad y al sabor auténtico. Con pan tostado, dos grandes medallones de carne jugosa y queso fresco, cada bocado es una explosión directa de sabores clásicos. La combinación de lo crujiente y lo cremoso hace de la "JavaScript" una elección perfecta para quienes buscan una experiencia de hamburguesa sin complicaciones pero llena de impacto.</p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#textCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#textCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+    </section>
+    <section id="footer">
+        <div id="redes">
+            <h4>Redes</h4>
+            <div class="red">
+                <img src="/img/instagram-alt-logo-24.png" alt="">
+                <p>ByteBurger_</p>
+            </div>
+            <div class="red">
+                <img src="/img/envelope-solid-24.png" alt="">
+                <p>byteburger@hotmail.com</p>
+            </div>
+            <div class="red">
+                <img src="/img/phone-solid-24.png" alt="">
+                <p>+54 9 11 7856-9832</p>
+            </div>
+        </div>
+        <div id="info">
+            <h4>Sobre nosotros</h4>
+            <p>Somos un grupo de amigos apasionados por la informatica y la comida. Nuestra duda fue siempre como podemos relacionar la programacion con la comida? Luego de bastante tiempo pensando llegamos a la conclusion de que teniamos que vender hamburguesas con nombres de lenguajes de programacion!!!</p>
+        </div>
+        <div id="copyright">
+            <h4>Politicas legales</h4>
+            <p>Terminos y condiciones/Politicas de privacidad</p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
