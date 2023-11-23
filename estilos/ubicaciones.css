@@ -200,6 +200,27 @@
     margin-top: 20px;
 }
 
+#descrpImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+}
+
+#descrpImg h3 {
+    font-family: 'Caveat', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+#bannerImg {
+    opacity: 0.8;
+}
 
 @media (max-width: 768px) {
     #nav {
