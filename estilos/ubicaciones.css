@@ -282,4 +282,12 @@
         height: 400px;
 
     }
+
+    #descrpImg {
+        left: 50px;
+    }
+    
+    #descrpImg h3 {
+        font-size: 17px;
+    }
 }
